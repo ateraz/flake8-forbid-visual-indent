@@ -1,0 +1,14 @@
+# Compiled python modules
+*.pyc
+
+# Distribution / packaging
+*.egg-info/
+
+# Test cache
+.pytest_cache/
+
+# Test coverage
+.coverage
+
+# Type checker cache
+.mypy_cache
