@@ -45,5 +45,8 @@ class TestChecker:
     def test_error_on_dict_comprehention(self) -> None:
         check("return {k: v\n        for k, v in l}", error_position=(2, 8))
 
+    def test_error_on_dict_literal(self) -> None:
+        check("variable = {'first': 1,\n            'second': 2}", error_position=(2, 12))
+
     def test_error_on_map(self) -> None:
         check("map(f,\n    l)", error_position=(2, 4))

@@ -2,6 +2,7 @@
 *.pyc
 
 # Distribution / packaging
+.eggs
 *.egg-info/
 
 # Test cache

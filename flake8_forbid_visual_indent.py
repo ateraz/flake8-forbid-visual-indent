@@ -2,7 +2,7 @@ import tokenize
 from itertools import groupby
 from typing import Iterator, List, Tuple
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 
 def _get_line(token: tokenize.TokenInfo) -> int:
@@ -48,7 +48,7 @@ class ForbidVisualIndent:
 
         last_token_on_first_line = line_tokens[0][-1]
         first_token_on_second_line = line_tokens[1][0]
-        if first_token_on_second_line.type not in {tokenize.NAME, tokenize.NUMBER}:
+        if first_token_on_second_line.type not in {tokenize.NAME, tokenize.NUMBER, tokenize.STRING}:
             return
         if last_token_on_first_line.string == ",":
             self._messages.append((
